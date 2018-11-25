@@ -164,16 +164,16 @@ document.getElementById('SubmitTotal').addEventListener("click",
 
         if (bilan < 0) {
             document.getElementById('TotalResult').style.color = 'red';
-            alert('Bilan Negatif');
+            alert('Negatif');
         }
         if (bilan > 0) {
             document.getElementById('TotalResult').style.color = 'blue';
-            alert("Bilan Positif");
+            alert("Positif");
         }
 
         if (bilan == 0) {
             document.getElementById('TotalResult').style.color = 'white';
-            alert("Bilan Neutre");
+            alert(" Neutre");
         }
 
 
@@ -183,43 +183,27 @@ document.getElementById('SubmitTotal').addEventListener("click",
 
 // is a button for reset
 
-document.getElementById('RESET').addEventListener("click",
+document.getElementById('reset').addEventListener("click",
 
 
     function resetFields() {
 
         document.getElementById('SpendAmount').value = "";
-
         document.getElementById('SpendType').value = "";
-
         document.getElementById('loyerAmount').value = "";
-
         document.getElementById('eauAmount').value = "";
-
         document.getElementById('internetAmount').value = "";
-
         document.getElementById('courseAmount').value = "";
-
         document.getElementById('essenceAmount').value = "";
-
         document.getElementById('sportAmount').value = "";
-
         document.getElementById('sortiesAmount').value = "";
-
         document.getElementById('spendautreAmount').value = "";
-
         document.getElementById('RevenueAmount').value = "";
-
         document.getElementById('salaireAmount').value = "";
-
         document.getElementById('aideAmount').value = "";
-
         document.getElementById('renteAmount').value = "";
-
         document.getElementById('autreAmount').value = "";
-
         document.getElementById('SavingAmount').value = "";
-
         document.getElementById('RevenueType').value = "";
 
 
@@ -234,7 +218,7 @@ document.getElementById('RESET').addEventListener("click",
 
 // valor of editor you send the valor you want to add
 
-document.getElementById('EDITER').addEventListener("click",
+document.getElementById('edite').addEventListener("click",
 
     function modifier() {
 
