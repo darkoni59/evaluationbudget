@@ -1,71 +1,44 @@
 var TabSpend = [];
 var TabRevenue = [];
 var TabSavings = [];
-
-
 // your Spend of mounth
-
 document.getElementById('SubmitSpend').addEventListener("click",
-
-
     function () {
 
 
         var SpendType = document.getElementById('SpendType').value;
         var SpendAmount = document.getElementById('SpendAmount').value * 1;
-
-
         var loyerType = document.getElementById('loyer').innerHTML;
         var loyerAmount = document.getElementById('loyerAmount').value * 1;
         document.getElementById('summloyer').innerHTML = loyerType + ' : ' + loyerAmount + '<br>';
-
-
         var eauType = document.getElementById('eau').innerHTML;
         var eauAmount = document.getElementById('eauAmount').value * 1;
         document.getElementById('summEau').innerHTML = eauType + ' : ' + eauAmount + '<br>';
-
-
         var internetType = document.getElementById('internet').innerHTML;
         var internetAmount = document.getElementById('internetAmount').value * 1;
         document.getElementById('summInternet').innerHTML = internetType + ':' + internetAmount + '<br>';
-
-
         var courseType = document.getElementById('course').innerHTML;
         var courseAmount = document.getElementById('courseAmount').value * 4;
         document.getElementById('summCourse').innerHTML = courseType + ":" + courseAmount + '<br>';
-
-
         var essenceType = document.getElementById('essence').innerHTML;
         var essenceAmount = document.getElementById('essenceAmount').value * 4;
         document.getElementById('summEssence').innerHTML = essenceType + ":" + essenceAmount + '<br>';
-
-
         var sportType = document.getElementById('sport').innerHTML;
         var sportAmount = document.getElementById('sportAmount').value / 12;
         document.getElementById('summSport').innerHTML = sportType + ":" + sportAmount + '<br>';
-
-
         var sortiesType = document.getElementById('sorties').innerHTML;
         var sortiesAmount = document.getElementById('sortiesAmount').value * 4;
         document.getElementById('summSorties').innerHTML = sortiesType + ":" + sortiesAmount + '<br>';
-
-
         var spendautreType = document.getElementById('spendautre').innerHTML;
         var spendautreAmount = document.getElementById('spendautreAmount').value * 1;
         document.getElementById('summSpendAutre').innerHTML = spendautreType + ":" + spendautreAmount + '<br>';
-
-
         TabSpend.push(SpendAmount, loyerAmount, eauAmount, internetAmount, courseAmount, essenceAmount, sportAmount, sortiesAmount, spendautreAmount);
-
         document.getElementById('SummSpend').innerHTML += SpendType + ' : ' + SpendAmount + '<br>';
-
         var totalD = 0;
         for (var i = 0; i < TabSpend.length; i++) {
             totalD += parseFloat(TabSpend[i]);
         }
-
         document.getElementById('TotalSpend').innerHTML = totalD;
-
 
     });
 
@@ -123,42 +96,30 @@ document.getElementById('SubmitEpargne').addEventListener("click",
 
 
         TabSavings.push(SavingAmount);
-
         document.getElementById('SummSaving').innerHTML += SavingAmount + '<br>';
-
-
         var totalE = 0;
         for (var i = 0; i < TabSavings.length; i++) {
             totalE += parseFloat(TabSavings[i]);
         }
-
         document.getElementById('TotalSaving').innerHTML = totalE;
-
-
     });
 
 
-// TOTAL
-
+// total
 document.getElementById('SubmitTotal').addEventListener("click",
-
     function () {
-
         var totalE = 0;
         for (var i = 0; i < TabSavings.length; i++) {
             totalE += parseFloat(TabSavings[i]);
         }
-
         var totalR = 0;
         for (var i = 0; i < TabRevenue.length; i++) {
             totalR += parseFloat(TabRevenue[i]);
         }
-
         var totalD = 0;
         for (var i = 0; i < TabSpend.length; i++) {
             totalD += parseFloat(TabSpend[i]);
         }
-
         bilan = totalE + totalR - totalD;
         document.getElementById('TotalResult').innerHTML = bilan;
 
@@ -184,10 +145,7 @@ document.getElementById('SubmitTotal').addEventListener("click",
 // is a button for reset
 
 document.getElementById('reset').addEventListener("click",
-
-
     function resetFields() {
-
         document.getElementById('SpendAmount').value = "";
         document.getElementById('SpendType').value = "";
         document.getElementById('loyerAmount').value = "";
@@ -205,12 +163,8 @@ document.getElementById('reset').addEventListener("click",
         document.getElementById('autreAmount').value = "";
         document.getElementById('SavingAmount').value = "";
         document.getElementById('RevenueType').value = "";
-
-
         TabSpend = [];
-
         TabRevenue = [];
-
         TabSavings = [];
         console.log();
     }
@@ -219,13 +173,9 @@ document.getElementById('reset').addEventListener("click",
 // valor of editor you send the valor you want to add
 
 document.getElementById('edite').addEventListener("click",
-
     function modifier() {
-
         TabSpend = [];
-
         TabRevenue = [];
-
         TabSavings = [];
 
     });
