@@ -1,13 +1,13 @@
-var TabSpend = [];
-var TabRevenue = [];
-var TabSavings = [];
+var Tabldepense = [];
+var Tablrevenue = [];
+var Tablepargne = [];
 // your Spend of mounth
 document.getElementById('SubmitSpend').addEventListener("click",
     function () {
 
 
-        var SpendType = document.getElementById('SpendType').value;
-        var SpendAmount = document.getElementById('SpendAmount').value * 1;
+        var depense = document.getElementById('SpendType').value;
+        var depensemoi = document.getElementById('SpendAmount').value * 1;
         var loyerType = document.getElementById('loyer').innerHTML;
         var loyerAmount = document.getElementById('loyerAmount').value * 1;
         document.getElementById('summloyer').innerHTML = loyerType + ' : ' + loyerAmount + '<br>';
@@ -32,11 +32,11 @@ document.getElementById('SubmitSpend').addEventListener("click",
         var spendautreType = document.getElementById('spendautre').innerHTML;
         var spendautreAmount = document.getElementById('spendautreAmount').value * 1;
         document.getElementById('summSpendAutre').innerHTML = spendautreType + ":" + spendautreAmount + '<br>';
-        TabSpend.push(SpendAmount, loyerAmount, eauAmount, internetAmount, courseAmount, essenceAmount, sportAmount, sortiesAmount, spendautreAmount);
-        document.getElementById('SummSpend').innerHTML += SpendType + ' : ' + SpendAmount + '<br>';
+        Tabldepense.push(depensemoi, loyerAmount, eauAmount, internetAmount, courseAmount, essenceAmount, sportAmount, sortiesAmount, spendautreAmount);
+        document.getElementById('SummSpend').innerHTML += depense + ' : ' + depensemoi + '<br>';
         var totalD = 0;
-        for (var i = 0; i < TabSpend.length; i++) {
-            totalD += parseFloat(TabSpend[i]);
+        for (var i = 0; i < Tabldepense.length; i++) {
+            totalD += parseFloat(Tabldepense[i]);
         }
         document.getElementById('TotalSpend').innerHTML = totalD;
 
@@ -72,13 +72,13 @@ document.getElementById('SubmitRecette').addEventListener("click",
 
 
 
-        TabRevenue.push(RevenueAmount, salaireAmount, aideAmount, renteAmount, autreAmount);
+        Tablrevenue.push(RevenueAmount, salaireAmount, aideAmount, renteAmount, autreAmount);
 
         document.getElementById('SummRevenue').innerHTML += RevenueType + ' : ' + RevenueAmount + '<br>';
 
         var totalR = 0;
-        for (var i = 0; i < TabRevenue.length; i++) {
-            totalR += parseFloat(TabRevenue[i]);
+        for (var i = 0; i < Tablrevenue.length; i++) {
+            totalR += parseFloat(Tablrevenue[i]);
         }
 
         document.getElementById('TotalRevenue').innerHTML = totalR;
@@ -95,11 +95,11 @@ document.getElementById('SubmitEpargne').addEventListener("click",
         var SavingAmount = document.getElementById('SavingAmount').value * 1;
 
 
-        TabSavings.push(SavingAmount);
+        Tablepargne.push(SavingAmount);
         document.getElementById('SummSaving').innerHTML += SavingAmount + '<br>';
         var totalE = 0;
-        for (var i = 0; i < TabSavings.length; i++) {
-            totalE += parseFloat(TabSavings[i]);
+        for (var i = 0; i < Tablepargne.length; i++) {
+            totalE += parseFloat(Tablepargne[i]);
         }
         document.getElementById('TotalSaving').innerHTML = totalE;
     });
@@ -109,16 +109,16 @@ document.getElementById('SubmitEpargne').addEventListener("click",
 document.getElementById('SubmitTotal').addEventListener("click",
     function () {
         var totalE = 0;
-        for (var i = 0; i < TabSavings.length; i++) {
-            totalE += parseFloat(TabSavings[i]);
+        for (var i = 0; i < Tablepargne.length; i++) {
+            totalE += parseFloat(Tablepargne[i]);
         }
         var totalR = 0;
-        for (var i = 0; i < TabRevenue.length; i++) {
-            totalR += parseFloat(TabRevenue[i]);
+        for (var i = 0; i < Tablrevenue.length; i++) {
+            totalR += parseFloat(Tablrevenue[i]);
         }
         var totalD = 0;
-        for (var i = 0; i < TabSpend.length; i++) {
-            totalD += parseFloat(TabSpend[i]);
+        for (var i = 0; i < Tabldepense.length; i++) {
+            totalD += parseFloat(Tabldepense[i]);
         }
         bilan = totalE + totalR - totalD;
         document.getElementById('TotalResult').innerHTML = bilan;
@@ -163,9 +163,9 @@ document.getElementById('reset').addEventListener("click",
         document.getElementById('autreAmount').value = "";
         document.getElementById('SavingAmount').value = "";
         document.getElementById('RevenueType').value = "";
-        TabSpend = [];
-        TabRevenue = [];
-        TabSavings = [];
+        Tabldepense = [];
+        Tablrevenue = [];
+        Tablepargne = [];
         console.log();
     }
 );
@@ -174,8 +174,8 @@ document.getElementById('reset').addEventListener("click",
 
 document.getElementById('edite').addEventListener("click",
     function modifier() {
-        TabSpend = [];
-        TabRevenue = [];
-        TabSavings = [];
+        Tabldepense = [];
+        Tablrevenue = [];
+        Tablepargne = [];
 
     });
