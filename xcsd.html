@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="edf.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+
+<h1>mon budget.com <br>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg/2000px-Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg.png">
+</h1>
+
+
+<div class="container" id="left">
+
+    <h2>Dépenses</h2>
+
+
+    <div id="loyer">Loyer et Charges:</div>
+    <input id="loyerAmount" type="number" placeholder="Montant loyer">
+
+    <div id="eau">Facture: </div>
+    <input id="eauAmount" type="number" placeholder="Montant eau gaz electricité">
+
+    <div id="internet">Internet/ Telephone</div>
+    <input id="internetAmount" type="number" placeholder="Montant internet telephone">
+
+    <div id="course">Alimentaire:</div>
+    <input id="courseAmount" type="number" placeholder="Montant hebdo course">
+
+    <div id="essence">Essence: </div>
+    <input id="essenceAmount" type="number" placeholder="Montant hebdo essence">
+
+    <div id="sport">Sport / Activités Culturelles: </div>
+    <input id="sportAmount" type="number" placeholder="Montant annuel sport">
+
+
+    <div id="sorties"> Sorties: </div>
+    <input id="sortiesAmount" type="number" placeholder="montant hebdo sortie">
+
+    <div id="spendautre"> Autre:</div>
+    <input id="spendautreAmount" type="number" placeholder="montant autres">
+
+
+    <div id="add">Divers:</div>
+    <input id="SpendType" type="text" placeholder="Entrez la nature de la Dépense"><br>
+    <input id="SpendAmount" type="number" placeholder="Entrez la Dépense">
+    <button id="SubmitSpend">Envoyer</button>
+
+    <p id="summloyer"></p>
+    <p id="summEau"></p>
+    <p id="summInternet"></p>
+    <p id="summCourse"></p>
+    <p id="summEssence"></p>
+    <p id="summSport"></p>
+
+    <p id="summSorties"></p>
+    <p id="summSpendAutre"></p>
+
+    <p id="SummSpend"></p>
+    <p>Total: </p>
+    <p id="TotalSpend"></p>
+
+</div>
+
+<div class="container2" id="center">
+
+    <h2>Recettes</h2>
+
+    <div id="salaire">Salaire</div>
+    <input id="salaireAmount" type="number" placeholder="Montant salaire:">
+
+    <div id="aide">Aides</div>
+    <input id="aideAmount" type="number" placeholder="Montant aide:">
+
+    <div id="rente">Rente</div>
+    <input id="renteAmount" type="number" placeholder="Montant rente:">
+
+    <div id="autre">Autre</div>
+    <input id="autreAmount" type="number" placeholder="Montant Autre:">
+
+
+    <div id="add2">Diver</div>
+    <input id="RevenueType" type="text" placeholder="Entrez la nature de la Recette" ><br>
+    <input id="RevenueAmount" type="number" placeholder="Montant de cette Recette">
+    <button id="SubmitRecette">Envoyer</button>
+
+
+    <p id="summSalaire"></p>
+    <p id="summAide"></p>
+    <p id="summRente"></p>
+    <p id="summAutre"></p>
+
+    <p id="SummRevenue"></p>
+    <p>Total: </p>
+    <p id="TotalRevenue"></p>
+
+
+</div>
+
+<div class="container3" id="right">
+
+    <h2>Épargne</h2>
+
+
+    <input id="SavingAmount" type="number" placeholder="Entrez l'Epargne">
+    <button id="SubmitEpargne">Envoyer</button>
+
+    <p id="SummSaving"></p>
+    <p> Total: </p>
+    <p id="TotalSaving"></p>
+
+
+    <div class="container4" id="bottom">
+
+
+        <h2 id="SummResult"></h2>
+        <p> Total: </p>
+        <p id="TotalResult"></p>
+
+        <button id="SubmitTotal">TOTAL</button>
+        <input type="button" value="Reset" id="RESET"/>
+
+        <input type="button" value="Editer Dépenses et Recette fixes" id="EDITER"/>
+
+    </div>
+
+</div>
+<footer><address>www.monbudget.com</address>
+</footer>
+<script src="dx.js"></script>
+</body>
+</html>
