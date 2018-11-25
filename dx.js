@@ -1,5 +1,3 @@
-// Array
-
 var TabSpend = [];
 var TabRevenue = [];
 var TabSavings = [];
@@ -230,7 +228,7 @@ document.getElementById('RESET').addEventListener("click",
         TabRevenue = [];
 
         TabSavings = [];
-console.log();
+        console.log();
     }
 );
 
